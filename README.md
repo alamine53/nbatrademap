@@ -9,6 +9,11 @@ Motivation: Can we get a statistical analysis as to whether
             
 Plan of attack:
 
+Start with two data points: Kevin Durant and Kyrie Irving
+
+1. Durant moves from GSW to BKN while Kyrie moves from BOS to BKN simultaneously. 
+2. Replace data points by players' faces. 
+
 Chapter 1
 1. Build USA Map and identify NBA cities by coordinates (done)
 2. Animate map:
