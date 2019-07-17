@@ -13,10 +13,28 @@ transactions <-table[[1]] %>%
   select(Rk, Player, WS, OTm, NTm, Terms) %>%
   filter(Rk != "Rk", NTm != "", as.numeric(Rk) < 11) 
 
-for(s in 1:8) {
+
+for(s in 1:10) {
   temp <- transactions %>%
     filter(Rk == s)
-  transactions <- rbind(transactions, temp) %>%
+  mvmt <- rbind(transactions, temp) %>%
+    rbind(transactions, temp) %>%
+    rbind(transactions, temp) %>%
+    rbind(transactions, temp) %>%
+    rbind(transactions, temp) %>%
+    rbind(transactions, temp) %>%
+    rbind(transactions, temp) %>%
+    rbind(transactions, temp) %>%
+    rbind(transactions, temp) %>%
+    rbind(transactions, temp)
+}
+
+
+
+
+transactions    
     group_by(Player) %>%
-    mutate(fr = 1:n())
-  }
+    mutate(fr = 1:n()) 
+}  arrange(Rk) %>%
+
+
